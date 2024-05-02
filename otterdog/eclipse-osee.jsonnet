@@ -22,7 +22,7 @@ orgs.newOrg('eclipse-osee') {
     orgs.newRepo('osee-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",

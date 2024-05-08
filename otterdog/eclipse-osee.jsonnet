@@ -20,7 +20,10 @@ orgs.newOrg('eclipse-osee') {
   ],
   _repositories+:: [
     orgs.newRepo('osee-website') {
-      allow_merge_commit: true,
+      allow_ff_only: true, 
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
+      allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "main",
       delete_branch_on_merge: false,
@@ -30,6 +33,29 @@ orgs.newOrg('eclipse-osee') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-    },
+      branch_protection_rules: [
+        {
+          name: "Two Review Policy with Eclipse Committer",
+          conditions: [
+            {
+              name: "Default branch protection",
+              type: "Branch",
+              pattern: "main",
+              branches: ["main"],
+              actions: {
+                merge: {
+                  enabled: true,
+                  approvals: 2,
+                  committer_approvals: 1
+                }
+              }
+            }
+          ],
+          restrictions: {
+            allow_ff: true
+          }
+        }
+      ]
+    }
   ],
 }

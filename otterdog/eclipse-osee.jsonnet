@@ -25,8 +25,6 @@ orgs.newOrg('eclipse-osee') {
       allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",

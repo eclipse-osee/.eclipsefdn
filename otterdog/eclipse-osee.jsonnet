@@ -34,7 +34,7 @@ orgs.newOrg('eclipse-osee') {
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           requires_linear_history: true,
-          required_approving_review_count: 1,
+          required_approving_review_count: 2,
         },
       ]
     },

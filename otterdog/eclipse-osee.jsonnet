@@ -56,5 +56,23 @@ orgs.newOrg('eclipse-osee') {
         },
       ]
     },
+    orgs.newRepo('org.eclipse.ote') {
+      description: "OSEE Test Environment",
+      homepage: "https://eclipse.dev/osee/",
+      allow_auto_merge: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: true,
+      allow_squash_merge: true,
+      allow_update_branch: true,
+      default_branch: "temp_main",
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_linear_history: true,
+          required_approving_review_count: 2,
+        },
+      ]
+    }
   ],
 }

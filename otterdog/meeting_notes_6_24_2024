@@ -1,0 +1,41 @@
+Proposed updates so far:
+
+dependabot_alerts_enabled: false, --   we should use renovate instead
+
+has_discussions: true, -- don’t see any sense in having this off. TODO:look into the api for github discussions to limit
+
+actions_can_approve_pull_request_reviews: false – actions should not be able to merge into main by default
+
+require_conversation_resolution: true – We want to people to close their review comments before merging.
+
+Add branch settings to allow non-main, non-release branches(if we have any) to be deleted. Still TODO we need to investigate what branches if(any) that we will have for releases.
+
+We will have to update status checks as they are made to block merge. (Note: status checks that don’t always run need a corollary always passing job).
+
+code_scanning_default_setup_enabled: true if it doesn't have too many errors the first time
+
+Limit bots making spam PRs – at some point
+
+TENTATIVE(future meeting):
+
+requires_code_owner_reviews : true – This will help protect our codebase as areas where we have PoCs can be guaranteed to be reviewed by someone who knows the area.
+
+CODEOWNERS file
+
+ATS Don/Vaibhav
+
+Publishing Loren/David/Jaden?
+
+DB Audrey/David/Luciano?
+
+Test/SCA Stephen?
+
+Authentication Luciano/Zach/David
+
+IDE Client Don/David/Vaibhav/Loren/Jaden
+
+Web Ryan|Luciano|Jaden
+
+MIM Ryan|Luciano|Audrey
+
+Build/Deploy Zach/Baily/Murshed?

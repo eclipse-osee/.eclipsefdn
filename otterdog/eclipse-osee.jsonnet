@@ -49,10 +49,14 @@ orgs.newOrg('eclipse-osee') {
       default_branch: "main",
       delete_branch_on_merge: true,
       web_commit_signoff_required: false,
+      dependabot_alerts_enabled: false,
+      has_discussions:true,
+      code_scanning_default_setup_enabled: true,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           requires_linear_history: true,
           required_approving_review_count: 2,
+          requires_conversation_resolution: true,
         },
       ]
     },

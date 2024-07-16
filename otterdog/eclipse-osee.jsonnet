@@ -53,6 +53,11 @@ orgs.newOrg('eclipse-osee') {
         orgs.newBranchProtectionRule('main') {
           requires_linear_history: true,
           required_approving_review_count: 2,
+          requires_strict_status_checks: true,
+          required_status_checks : [
+            "eclipse-eca-validation:eclipsefdn/eca",
+            "OSEE Build Validation",
+          ],
         },
       ]
     },

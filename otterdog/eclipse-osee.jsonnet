@@ -49,17 +49,6 @@ orgs.newOrg('eclipse-osee') {
       default_branch: "main",
       delete_branch_on_merge: true,
       web_commit_signoff_required: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          requires_linear_history: true,
-          required_approving_review_count: 2,
-          requires_strict_status_checks: true,
-          required_status_checks : [
-            "eclipse-eca-validation:eclipsefdn/eca",
-            "validate_osee_build_linux",
-          ],
-        },
-      ]
     },
     orgs.newRepo('org.eclipse.ote') {
       description: "OSEE Test Environment",

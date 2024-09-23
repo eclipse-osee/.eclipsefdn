@@ -60,8 +60,8 @@ orgs.newOrg('eclipse-osee') {
             "validate_osee_build_linux",
           ],
         },
-      ]
-     environments: [
+      ],
+      environments: [
         orgs.newEnvironment('pages') {
         },
       ]

@@ -62,7 +62,7 @@ orgs.newOrg('eclipse-osee') {
         },
       ],
       environments: [
-        orgs.newEnvironment('pages') {
+        orgs.newEnvironment('github-pages') {
         },
       ]
     },

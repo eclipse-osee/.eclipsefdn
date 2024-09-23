@@ -4,6 +4,7 @@ orgs.newOrg('eclipse-osee') {
   settings+: {
     description: "",
     web_commit_signoff_required: false,
+    members_can_create_public_pages: true,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
       default_workflow_permissions: "write",

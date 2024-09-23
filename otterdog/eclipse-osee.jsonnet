@@ -61,6 +61,10 @@ orgs.newOrg('eclipse-osee') {
           ],
         },
       ]
+     environments: [
+        orgs.newEnvironment('pages') {
+        },
+      ]
     },
     orgs.newRepo('org.eclipse.ote') {
       description: "OSEE Test Environment",

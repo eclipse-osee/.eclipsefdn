@@ -55,6 +55,7 @@ orgs.newOrg('eclipse-osee') {
           requires_linear_history: true,
           required_approving_review_count: 2,
           requires_strict_status_checks: true,
+          dismisses_stale_reviews: true,
           required_status_checks : [
             "eclipse-eca-validation:eclipsefdn/eca",
             "validate_osee_build_linux",

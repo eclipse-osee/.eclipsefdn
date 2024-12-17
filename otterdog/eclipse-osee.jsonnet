@@ -18,6 +18,11 @@ orgs.newOrg('eclipse-osee') {
       ],
     },
   ],
+  secrets+: [
+    orgs.newOrgSecret('OSEE_PACKAGE_REGISTRY_MANAGEMENT_BOT') {
+      value: "pass:bots/org.eclipse.osee/github.com/project-token",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('osee-website') {
       description: "OSEE Website",

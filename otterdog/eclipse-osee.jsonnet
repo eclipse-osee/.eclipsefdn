@@ -59,7 +59,10 @@ orgs.newOrg('technology.osee', 'eclipse-osee') {
           required_status_checks : [
             "eclipse-eca-validation:eclipsefdn/eca",
             "validate_osee_build_linux",
-            "osee-web-pr",
+            "lint",
+            "build",
+            "formatting",
+            "unit_tests"
           ],
         },
       ],

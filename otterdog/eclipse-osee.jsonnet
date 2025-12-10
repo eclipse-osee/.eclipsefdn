@@ -62,7 +62,7 @@ orgs.newOrg('technology.osee', 'eclipse-osee') {
             "lint / Angular Lint (osee-web-pr)",
             "build / Angular Build (osee-web-pr)",
             "formatting / Angular Formatting (osee-web-pr)",
-            "unit tests / Angular Unit Tests (osee-web-pr)"
+            "unit_tests / Angular Unit Tests (osee-web-pr)"
           ],
         },
       ],
